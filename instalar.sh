@@ -1,22 +1,11 @@
 #!/usr/bin/env bash
 #
-# instalar.sh — Instalador LaCasita Free
-# Destritos: /etc/VPS-MX + marcações em /usr/local + serviço systemd do vpsmx-server.py
-#
-# Uso:
-#   bash instalar.sh                -> usa ZIP_URL abaixo
-#   bash instalar.sh <URL-do-zip>   -> usa a URL passada na linha de comando
-#   bash instalar.sh --local        -> usa ./lacasita-free.zip do diretório atual
-#
+# Distribuido Gratuitamente - https://t.me/speednet_oficial
 
 set -u
 
 # ============================== CONFIG =================================
-
-# Troque pela URL real onde você subir o arquivo (Dropbox/GitHub/raw/etc).
-# Lembre: para o Dropbox funcionar direto no curl/wget, o link precisa
-# terminar com ?dl=raw ou ?dl=1  (ex.: https://...?dl=1)
-ZIP_URL="https://example.com/lacasita-free.zip"
+ZIP_URL="https://github.com/LaelsonCG/LaCasita/raw/refs/heads/main/lacasita-free.zip"
 
 PROJ="/etc/VPS-MX"
 SRV_PY="$PROJ/vpsmx-server.py"
